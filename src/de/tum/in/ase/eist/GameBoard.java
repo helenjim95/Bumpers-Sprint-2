@@ -3,6 +3,7 @@ package de.tum.in.ase.eist;
 import java.util.ArrayList;
 import java.util.List;
 
+import de.tum.in.ase.eist.audio.AudioPlayer;
 import de.tum.in.ase.eist.audio.AudioPlayerInterface;
 
 /**
@@ -166,8 +167,10 @@ public class GameBoard {
 				Car winner = collision.evaluate();
 				printWinner(winner);
 
-				// TODO Backlog Item 12: Play crash sound
+				AudioPlayer crashPlayer = new AudioPlayer();
+				crashPlayer.playCrashSound();
 				// Hint: take a look at AudioPlayer
+
 			}
 		}
 	}
