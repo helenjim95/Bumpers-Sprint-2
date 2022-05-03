@@ -167,8 +167,7 @@ public class GameBoard {
 				Car winner = collision.evaluate();
 				printWinner(winner);
 
-				AudioPlayer crashPlayer = new AudioPlayer();
-				crashPlayer.playCrashSound();
+				getAudioPlayer().playCrashSound();
 				// Hint: take a look at AudioPlayer
 
 			}
